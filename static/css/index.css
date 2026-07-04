@@ -31,6 +31,35 @@ body {
 .publication-title {
 }
 
+.publication-badge-wrap {
+  margin: 0.9rem 0 1.45rem;
+}
+
+.publication-badge {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.55rem;
+  color: #173f6b;
+  font-family: 'Castoro', serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.publication-badge::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 72%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(23, 63, 107, 0.08), rgba(23, 63, 107, 0.9), rgba(23, 63, 107, 0.08));
+  transform: translateX(-50%);
+}
+
 .publication-banner {
   max-height: parent;
 
@@ -49,6 +78,7 @@ body {
 
 .publication-title {
     font-family: 'Google Sans', sans-serif;
+    margin-bottom: 0.2rem;
 }
 
 .publication-authors {
@@ -154,4 +184,12 @@ body {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .publication-badge {
+    font-size: 1.28rem;
+    letter-spacing: 0.12em;
+    padding-bottom: 0.45rem;
+  }
 }
